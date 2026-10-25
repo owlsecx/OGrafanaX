@@ -18,19 +18,18 @@
 
 ## 📌 Overview
 
-Offline Grafana / Prometheus / Alertmanager / Loki configuration auditor
+OGrafanaX — Observability-Stack Configuration Auditor. It provides stdlib INI (+ GF_* env) and YAML-lite parsers with line tracking. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
 ## ✨ Features
 
 - Stdlib INI (+ GF_* env) and YAML-lite parsers with line tracking
-- Grafana — default admin / secret_key, anonymous roles, sign-up, auth proxy, cookies, HSTS, embedding, CSP, unsigned plugins, Angular, proxy whitelist, snapshots, provisioning passwords, EOL + CVE-2021-43798 / CVE-2025-4123 version matching
+- Grafana — default admin / secret_key, anonymous roles, sign-up, auth proxy, cookies, HSTS, embedding, CSP, unsigned plugins, Angular, proxy whitelist, snapshots, provisioning passwords, EOL + CVE-2021-43798 / CVE-2025-41
 - Prometheus / Alertmanager — web.yml auth & TLS, admin / lifecycle flags, exposure, scrape / remote_write TLS & creds, webhooks
 - Loki / Promtail — auth_enabled, tenancy, storage keys, clients
 - Secrets masked everywhere; --root discovery; CWE/CVE/MITRE
 - Export TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- Self-test --demo, CI gates --fail-on / --min-severity
 
 ---
 
@@ -44,7 +43,10 @@ Offline Grafana / Prometheus / Alertmanager / Loki configuration auditor
 ## 🚀 Usage
 
 ```bash
-./OGrafanaX
+./OGrafanaX                                     # interactive menu
+./OGrafanaX --scan -r /path/to/root
+./OGrafanaX --demo
+./OGrafanaX --help
 ```
 
 ---
